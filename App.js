@@ -1,3 +1,12 @@
+/*
+ * File: app.js
+ * Authors: Olah Janos Gergely & Hegedus Gyorgy
+ * Copyright: 2021, Olah Janos Gergely & Hegedus Gyorgy
+ * Group: Szoft II/N
+ * Date: 2022-01-03
+ * Github: https://github.com/olahjg & https://github.com/Gyuri21
+ * Licenc: GNU GPL
+ */
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
 import { StyleSheet, Text, View, TextInput} from 'react-native';
