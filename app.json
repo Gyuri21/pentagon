@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "sulis dolgozat",
+    "githubUrl": "https://github.com/Gyuri21/pentagon.git"
   }
 }

@@ -14,11 +14,11 @@ import { Button } from 'react-native-web';
 
 export default function App() {
   const[sidelenght,setSidelenght] = useState();
-  const[area,setarea] = useState();
+  const[area,setArea] = useState();
 
   function calcArea(){
       let result = Math.pow(sidelenght,2)*Math.sqrt(25+10*Math.sqrt(5))/4;
-      setarea(result);
+      setArea(result);
       
   }
 
