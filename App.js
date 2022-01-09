@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
     textAlign: 'center'
   },
   texts:{
-    fontSize: '180%',
+    fontSize: 50,
     fontWeight: 'bold',
     color: 'blue'
   },
   results:{
-    fontSize: '120%',
+    fontSize: 30,
     color: 'blue',
     fontWeight: 'bold'
   },
@@ -74,12 +74,14 @@ const styles = StyleSheet.create({
     padding: 2,
     borderRadius: 3,
     justifyContent: 'center',
+    textAlign: 'center',
     width: '30%',
   },
   runText: {
     color: 'white',
     paddingLeft: 10,
     paddingRight: 10,
-    fontSize: 22,
+    fontSize: 21,
+    textAlign: 'center'
   }
 });
