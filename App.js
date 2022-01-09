@@ -9,8 +9,9 @@
  */
 import { StatusBar } from 'expo-status-bar';
 import React, {useState}from 'react';
-import { StyleSheet, Text, View, TextInput} from 'react-native';
-import { Button } from 'react-native-web';
+import {TouchableHighlight, ImageBackground, StyleSheet, Text, View, TextInput} from 'react-native';
+
+const image = { uri: "https://www.patternpictures.com/wp-content/uploads/Geometric-pentagon-shapes-sublte-white-background-seamless-pattern-patternpictures-0220.png" };
 
 export default function App() {
   const[sidelenght,setSidelenght] = useState();
@@ -23,35 +24,62 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      <Text>Pentagon</Text>
-      <Text>Oldalhosszusag</Text>
+    
+      <ImageBackground source={image} resizeMode="cover" style={styles.image}>
+      <Text style={styles.texts}>Pentagon</Text>
       <TextInput placeholder = "Oldalhosszusag: " style = {styles.input} onChangeText={sidelenght => setSidelenght(sidelenght)}/>
-      <Button 
-      title= "Számol"
-      onPress = {calcArea}
-      />
-      <Text>Terület</Text>
+      <TouchableHighlight
+          style={styles.runButton}
+          onPress={calcArea}
+          >
+          <Text style={styles.runText}>Számol</Text>
+      </TouchableHighlight>
+      <Text style={styles.results}>Terület</Text>
       <Text>{area}</Text>
       <StatusBar style="auto" />
-    </View>
+      </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  input:{
+    borderWidth:3,
+    borderColor: "blue", 
+    margin: 10,
+    padding: 3,
+    borderRadius: 4,
+    width: '50%'
+  },
+  image: {
     flex: 1,
-    backgroundColor: '#fff',
+    width: null,
+    height: null,
     alignItems: 'center',
     justifyContent: 'center',
-    
+    textAlign: 'center'
   },
-  input:{
-    borderWidth:2,
-    width: '80%',
-    borderColor: "blue", 
-    margin: 8,
-    width: 500,
-    padding: 4
+  texts:{
+    fontSize: '180%',
+    fontWeight: 'bold',
+    color: 'blue'
   },
+  results:{
+    fontSize: '120%',
+    color: 'blue',
+    fontWeight: 'bold'
+  },
+  runButton: {
+    backgroundColor: 'blue',
+    margin: 10,
+    padding: 2,
+    borderRadius: 3,
+    justifyContent: 'center',
+    width: '30%',
+  },
+  runText: {
+    color: 'white',
+    paddingLeft: 10,
+    paddingRight: 10,
+    fontSize: 22,
+  }
 });
